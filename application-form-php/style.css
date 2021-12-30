@@ -127,7 +127,7 @@ form.sign-in-form {
 }
 .btn2 {
   width: 150px;
-  background-color: hsl(2, 84%, 29%);
+  background-color: red;
   border: none;
   outline: none;
   height: 49px;
@@ -145,4 +145,10 @@ form.sign-in-form {
 }
 .btn2:hover {
   background-color: #5cc22d;
+}
+.error {
+  background-color: red;
+}
+.valide {
+  background-color: greenyellow;
 }

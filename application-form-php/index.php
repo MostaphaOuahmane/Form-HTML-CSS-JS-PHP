@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <h1>inscription</h1>
-        <div class="forms-container">
+        <div class="forms-container" id="form_inscriptionn">
             <div class="signin">
                 <form action="" method="POST">
                     <div class="input-field">
@@ -44,7 +44,7 @@
             </div>
         </div>
     </div>
-
+    <script src="app.js"></script>
 </body>
 
 </html>
