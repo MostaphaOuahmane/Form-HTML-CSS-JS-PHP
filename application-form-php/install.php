@@ -17,7 +17,7 @@
 // 
 ?>
 <?php
-    //     $connection->exec($sql);
+//     $connection->exec($sql);
 
-    echo "congratulations you are connected to the database mode payment";
-    ?>
+echo "congratulations you are connected to the database mode payment";
+?>
