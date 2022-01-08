@@ -43,23 +43,23 @@
         <br>
         <?php if (isset($_POST['submit'])) : ?>
           <?php $condidat_upd = array(
-        
-            'prenom' =>$_POST['prenom'],
+
+            'prenom' => $_POST['prenom'],
             'nom' => $_POST['nom'],
             'email' => $_POST['email'],
             'mtPasse' =>  $_POST['mtPasse'],
             'RTmtPasse' => $_POST['RTmtPasse']
 
           ); ?>
-       
-      
+
+
 
           <?php $connection = new PDO($date_base, $bd_user, $bd_motPasse, $chercher_faute);
           // contacte la base de donnée
           ?>
-      <?php $sql = " UPDATE condidat SET prenom=:prenom, nom=:nom, email=:email, mtPasse=:mtPasse, RTmtPasse=:RTmtPasse where id=:id ";?>
-      <?php $statement = $connection->prepare($sql); ?>
-      <?php $statement->execute($condidat); ?>
+          <?php $sql = " UPDATE condidat SET prenom=:prenom, nom=:nom, email=:email, mtPasse=:mtPasse, RTmtPasse=:RTmtPasse where id=:id "; ?>
+          <?php $statement = $connection->prepare($sql); ?>
+          <?php $statement->execute($condidat); ?>
 
           <div style="background-color: green; color:black; padding: 10px; text-align:center;">
             <p>Your have updated your idea succesfully</p>
@@ -69,21 +69,21 @@
 
 
         <form method="post">
-        <?php foreach($condidat as $key=>$value): ?>
-        <label for="<?php echo $key; ?>"><?php echo $key; ?></label>
-        <?php if ($key == 'text'): ?>
-          <textarea name="<?php echo $key; ?>" rows="8" cols="80"><?php echo $value; ?></textarea>
-        <?php else: ?>
-          <input type="text" name="<?php echo $key; ?>"
-                             value="<?php echo $value; ?>"
-                             id="<?php echo $key; ?>"
-                            <?php if($key == 'id'){echo 'readonly';} ?>>
-        <?php endif; ?>
-        <br>
-        <br>
-      <?php endforeach; ?>
-      <input type="submit" name="submit" value="Update your idea">
-      </form>
+          <?php foreach ($condidat as $key => $value) : ?>
+            <label for="<?php echo $key; ?>"><?php echo $key; ?></label>
+            <?php if ($key == 'text' || $key == 'email' || $key == 'mtPasse' || 'RTmtPasse') : ?>
+              <textarea name="<?php echo $key; ?>" rows="8" cols="80"><?php echo $value; ?></textarea>
+            <?php else : ?>
+              <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>" id="<?php echo $key; ?>" <?php if ($key == 'id') {
+                                                                                                                      echo 'readonly';
+                                                                                                                    } ?>>
+
+            <?php endif; ?>
+            <br>
+            <br>
+          <?php endforeach; ?>
+          <input type="submit" name="submit" value="Update your idea">
+        </form>
       <?php endif; ?>
     </div>
 
@@ -92,10 +92,16 @@
   </div>
 
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-  <script src="app.js"></script>
+
+
+</body>
+
+</html>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+<script src="app.js"></script>
 </body>
 
 </html>
