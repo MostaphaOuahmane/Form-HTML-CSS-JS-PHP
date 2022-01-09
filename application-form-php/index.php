@@ -123,7 +123,7 @@
                     </tr>
                     <?php foreach ($results as $row) : ?>
                         <tr>
-                            <td> <a href="update.php?id=<?php echo $row['id']; ?>">#<?php echo $row['id']; ?></a></td>
+                            <td> <a href="update-exo.php?id=<?php echo $row['id']; ?>">#<?php echo $row['id']; ?></a></td>
                             <td><?php echo $row['prenom']; ?></td>
                             <td><?php echo $row['nom']; ?></td>
                             <td><?php echo $row['email']; ?></td>
