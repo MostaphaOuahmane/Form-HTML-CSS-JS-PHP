@@ -70,28 +70,28 @@
 
         <form method="post">
             <?php foreach ($condidat as $key => $value) : ?>
-             
-                <label  for="<?php echo $key; ?>"><?php echo $key; ?></label>
-               
+
+                <label for="<?php echo $key; ?>"><?php echo $key; ?></label>
+
                 <?php if ($key == 'text') : ?>
                     <textarea name="<?php echo $key; ?>" rows="8" cols="80"><?php echo $value; ?></textarea>
-                    <?php else : ?>
-                        
-                            <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>" id="<?php echo 
-                        $key; ?>" <?php if ($key == 'id') {
-                            echo 'readonly';
-                        } ?>>
-                       
-                        <?php endif; ?>
-                        <br>
-                        <br>
-                        <?php endforeach; ?>
-                        <button  class="btn btn-outline-secondary bg-success" id="update" type="submit" name="submit" value="Update your idea"> Update your idea</button>
-                    </form>
-                    
-                    <?php endif; ?>
-                    <!-- Option 1: Bootstrap Bundle with Popper -->
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+                <?php else : ?>
+
+                    <input type="text" name="<?php echo $key; ?>" value="<?php echo $value; ?>" id="<?php echo
+                                                                                                    $key; ?>" <?php if ($key == 'id') {
+                                        echo 'readonly';
+                                    } ?>>
+
+                <?php endif; ?>
+                <br>
+                <br>
+            <?php endforeach; ?>
+            <button class="btn btn-outline-secondary bg-success" id="update" type="submit" name="submit" value="Update your idea"> Update your idea</button>
+        </form>
+
+    <?php endif; ?>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="app.js"></script>
 </body>

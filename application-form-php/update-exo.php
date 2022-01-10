@@ -78,7 +78,8 @@
                     <?php elseif ($key == 'nom') : ?>
                         <div class="input-field">
                             <label for="nom"><i class="fas fa-users"></i> </label>
-                            <input type="<?php echo $key; ?>" name="nom" value="<?php echo $value; ?>" id="nom" class="form-control" placeholder="nom">
+                            <input type="<?php echo $key; ?>" name="nom" 
+                            value="<?php echo $value; ?>" id="nom" class="form-control" placeholder="nom">
                         </div>
 
                     <?php elseif ($key == 'email') : ?>
